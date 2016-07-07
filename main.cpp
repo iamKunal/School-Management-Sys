@@ -10,7 +10,7 @@ void gotoxy(int x,int y){					//gotoxy function for UNIX
 #ifndef unix								//If Compilation Environment is not UNIX
 #define CLS() system("cls")					//Windows clearscreen function
 #include<windows.h>
-void gotoxy(int x,int y){
+void gotoxy(int x,int y){					//gotoxy for Windows - it isn't my code
 	y--;
 	static HANDLE h=NULL;
 	if(!h){
@@ -26,7 +26,7 @@ void delay(unsigned int secs){				//Defining delay function for Windows
 
 #endif						
 #define FLBSTUD "student.txt"				//Macros for storing filenames for ease
-#define FLBCLAS "class.txt"
+#define FLBCLAS "class.txt"					//The files are binary files
 #define RULE(x) cout<<'\n'; for(int _=0;_<80;_++) cout<<x; cout<<'\n' //Outputs Horizontal Consisting of 'x's
 #define CL(cl,x) cl==0?1:cl==x				//Macro for disabling search through class
 using namespace std;
